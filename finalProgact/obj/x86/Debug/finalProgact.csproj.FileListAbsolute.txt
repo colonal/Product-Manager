@@ -5,3 +5,7 @@ C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProga
 C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.csproj.GenerateResource.Cache
 C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.exe
 C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.pdb
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.csprojResolveAssemblyReference.cache
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.AddProductForm2.resources
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.AddMemberForm3.resources
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.SellProductsForm4.resources
