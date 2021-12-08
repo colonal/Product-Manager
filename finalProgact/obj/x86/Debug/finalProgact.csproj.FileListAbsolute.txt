@@ -1,0 +1,7 @@
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\bin\Debug\finalProgact.exe
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\bin\Debug\finalProgact.pdb
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.Form1.resources
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.Properties.Resources.resources
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.csproj.GenerateResource.Cache
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.exe
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.pdb
