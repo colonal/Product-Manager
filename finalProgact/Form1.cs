@@ -24,6 +24,23 @@ namespace finalProgact
         private void Form1_Load(object sender, EventArgs e)
         {
             this.dataGridView2.Rows.Insert(0, "one", "two", "three", "four");
+            List<string> listProduct = new List<string>()
+                {
+                    "John Doe",
+                    "Jane Doe",
+                    "Joe Doe"
+                };
+
+            
+            var mbox = new finalProgact.ListPrductClass2();
+            List<List<string>> myList = mbox.myList;
+            mbox.myList.Add(new List<string> { "1", "Asus F15", " ASUS", "900", "20", "Avilable" });
+
+            for (int i = 0; i < myList.Count; i++) 
+            {
+                this.dataGridView2.Rows.Add(myList[i][1], myList[i][2], myList[i][3], myList[i][4],myList[i][5]);
+            }
+
         }
 
         private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
