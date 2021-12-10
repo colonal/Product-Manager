@@ -1,0 +1,10 @@
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\bin\Release\finalProgact.exe
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\bin\Release\finalProgact.pdb
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Release\finalProgact.AddMemberForm3.resources
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Release\finalProgact.AddProductForm2.resources
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Release\finalProgact.Form1.resources
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Release\finalProgact.Properties.Resources.resources
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Release\finalProgact.SellProductsForm4.resources
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Release\finalProgact.csproj.GenerateResource.Cache
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Release\finalProgact.exe
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Release\finalProgact.pdb

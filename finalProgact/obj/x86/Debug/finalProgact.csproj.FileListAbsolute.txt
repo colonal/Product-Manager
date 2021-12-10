@@ -9,3 +9,5 @@ C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProga
 C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.AddProductForm2.resources
 C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.AddMemberForm3.resources
 C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.SellProductsForm4.resources
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.UpdataProduct.resources
+C:\colonal\Visual Studio 2010\finalProgact\finalProgact\obj\x86\Debug\finalProgact.DisplayMember.resources

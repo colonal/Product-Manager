@@ -41,7 +41,17 @@
             this.tablePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableQouta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableAvailbility = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.indexP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tabMember = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.tabSell = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox4 = new RoundPanel();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -51,36 +61,28 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabMember = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tableMemberId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableMemberName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableMemberSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tablePhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new RoundPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.tabSell = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.tableMemberName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableMemberSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tablePhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableMemberId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.indexM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.tabMember.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox6.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             this.tabSell.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -163,44 +165,59 @@
             this.tableManufacturer,
             this.tablePrice,
             this.tableQouta,
-            this.tableAvailbility});
+            this.tableAvailbility,
+            this.indexP});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(1006, 620);
             this.dataGridView2.TabIndex = 10;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridView2.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseDoubleClick);
+            this.dataGridView2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView2_KeyDown);
             // 
             // tableProductName
             // 
             this.tableProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tableProductName.HeaderText = "Product Name";
             this.tableProductName.Name = "tableProductName";
+            this.tableProductName.ReadOnly = true;
             // 
             // tableManufacturer
             // 
             this.tableManufacturer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tableManufacturer.HeaderText = "Manufacturer";
             this.tableManufacturer.Name = "tableManufacturer";
+            this.tableManufacturer.ReadOnly = true;
             // 
             // tablePrice
             // 
             this.tablePrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tablePrice.HeaderText = "Price";
             this.tablePrice.Name = "tablePrice";
+            this.tablePrice.ReadOnly = true;
             // 
             // tableQouta
             // 
             this.tableQouta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tableQouta.HeaderText = "Qouta";
             this.tableQouta.Name = "tableQouta";
+            this.tableQouta.ReadOnly = true;
             // 
             // tableAvailbility
             // 
             this.tableAvailbility.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tableAvailbility.HeaderText = "Availbility";
             this.tableAvailbility.Name = "tableAvailbility";
+            this.tableAvailbility.ReadOnly = true;
+            // 
+            // indexP
+            // 
+            this.indexP.HeaderText = "index";
+            this.indexP.Name = "indexP";
+            this.indexP.ReadOnly = true;
+            this.indexP.Visible = false;
             // 
             // groupBox1
             // 
@@ -212,6 +229,108 @@
             this.groupBox1.Size = new System.Drawing.Size(543, 620);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
+            // 
+            // tabMember
+            // 
+            this.tabMember.Controls.Add(this.dataGridView1);
+            this.tabMember.Controls.Add(this.groupBox6);
+            this.tabMember.Location = new System.Drawing.Point(4, 31);
+            this.tabMember.Name = "tabMember";
+            this.tabMember.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMember.Size = new System.Drawing.Size(1555, 626);
+            this.tabMember.TabIndex = 1;
+            this.tabMember.Text = "Member";
+            this.tabMember.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tableMemberName,
+            this.tableMemberSurname,
+            this.tablePhone,
+            this.tableMemberId,
+            this.indexM});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1006, 620);
+            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.groupBox8);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox6.Location = new System.Drawing.Point(1009, 3);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(543, 620);
+            this.groupBox6.TabIndex = 8;
+            this.groupBox6.TabStop = false;
+            // 
+            // tabSell
+            // 
+            this.tabSell.Controls.Add(this.groupBox5);
+            this.tabSell.Location = new System.Drawing.Point(4, 31);
+            this.tabSell.Name = "tabSell";
+            this.tabSell.Size = new System.Drawing.Size(1555, 626);
+            this.tabSell.TabIndex = 2;
+            this.tabSell.Text = "Sell Product";
+            this.tabSell.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label5);
+            this.groupBox5.Controls.Add(this.label4);
+            this.groupBox5.Controls.Add(this.label3);
+            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Location = new System.Drawing.Point(0, 0);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(1555, 626);
+            this.groupBox5.TabIndex = 0;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Statistcs";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(29, 232);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(174, 29);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Total Amount:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(29, 161);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(184, 29);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Sold Products:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(29, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(183, 29);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Total Member:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(177, 29);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Total Product:";
             // 
             // groupBox4
             // 
@@ -324,71 +443,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Search Box";
             // 
-            // tabMember
-            // 
-            this.tabMember.Controls.Add(this.dataGridView1);
-            this.tabMember.Controls.Add(this.groupBox6);
-            this.tabMember.Location = new System.Drawing.Point(4, 31);
-            this.tabMember.Name = "tabMember";
-            this.tabMember.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMember.Size = new System.Drawing.Size(1555, 626);
-            this.tabMember.TabIndex = 1;
-            this.tabMember.Text = "Member";
-            this.tabMember.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tableMemberId,
-            this.tableMemberName,
-            this.tableMemberSurname,
-            this.tablePhone});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1006, 620);
-            this.dataGridView1.TabIndex = 9;
-            // 
-            // tableMemberId
-            // 
-            this.tableMemberId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tableMemberId.HeaderText = "Member Id";
-            this.tableMemberId.MinimumWidth = 20;
-            this.tableMemberId.Name = "tableMemberId";
-            // 
-            // tableMemberName
-            // 
-            this.tableMemberName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tableMemberName.HeaderText = "Member Name";
-            this.tableMemberName.MinimumWidth = 20;
-            this.tableMemberName.Name = "tableMemberName";
-            // 
-            // tableMemberSurname
-            // 
-            this.tableMemberSurname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tableMemberSurname.HeaderText = "Member Surname";
-            this.tableMemberSurname.MinimumWidth = 20;
-            this.tableMemberSurname.Name = "tableMemberSurname";
-            // 
-            // tablePhone
-            // 
-            this.tablePhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tablePhone.HeaderText = "Phone";
-            this.tablePhone.MinimumWidth = 20;
-            this.tablePhone.Name = "tablePhone";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.groupBox8);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox6.Location = new System.Drawing.Point(1009, 3);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(543, 620);
-            this.groupBox6.TabIndex = 8;
-            this.groupBox6.TabStop = false;
-            // 
             // groupBox8
             // 
             this.groupBox8.BackColor = System.Drawing.Color.Cyan;
@@ -436,66 +490,44 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Sersh  Mumber";
             // 
-            // tabSell
+            // tableMemberName
             // 
-            this.tabSell.Controls.Add(this.groupBox5);
-            this.tabSell.Location = new System.Drawing.Point(4, 31);
-            this.tabSell.Name = "tabSell";
-            this.tabSell.Size = new System.Drawing.Size(1555, 626);
-            this.tabSell.TabIndex = 2;
-            this.tabSell.Text = "Sell Product";
-            this.tabSell.UseVisualStyleBackColor = true;
+            this.tableMemberName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tableMemberName.HeaderText = "Member Name";
+            this.tableMemberName.MinimumWidth = 20;
+            this.tableMemberName.Name = "tableMemberName";
+            this.tableMemberName.ReadOnly = true;
             // 
-            // groupBox5
+            // tableMemberSurname
             // 
-            this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Controls.Add(this.label4);
-            this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Controls.Add(this.label2);
-            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(0, 0);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1555, 626);
-            this.groupBox5.TabIndex = 0;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Statistcs";
+            this.tableMemberSurname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tableMemberSurname.HeaderText = "Member Surname";
+            this.tableMemberSurname.MinimumWidth = 20;
+            this.tableMemberSurname.Name = "tableMemberSurname";
+            this.tableMemberSurname.ReadOnly = true;
             // 
-            // label5
+            // tablePhone
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 232);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 29);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Total Amount:";
+            this.tablePhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tablePhone.HeaderText = "Phone";
+            this.tablePhone.MinimumWidth = 20;
+            this.tablePhone.Name = "tablePhone";
+            this.tablePhone.ReadOnly = true;
             // 
-            // label4
+            // tableMemberId
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(184, 29);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Sold Products:";
+            this.tableMemberId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tableMemberId.HeaderText = "Member Id";
+            this.tableMemberId.MinimumWidth = 20;
+            this.tableMemberId.Name = "tableMemberId";
+            this.tableMemberId.ReadOnly = true;
             // 
-            // label3
+            // indexM
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 105);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 29);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Total Member:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 29);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Total Product:";
+            this.indexM.HeaderText = "index";
+            this.indexM.Name = "indexM";
+            this.indexM.ReadOnly = true;
+            this.indexM.Visible = false;
             // 
             // Form1
             // 
@@ -514,18 +546,18 @@
             this.tabProduct.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.tabMember.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.tabSell.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.tabMember.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox6.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            this.tabSell.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -560,18 +592,20 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private RoundPanel groupBox2;
+        private RoundPanel groupBox4;
+        private RoundPanel groupBox8;
         private System.Windows.Forms.DataGridViewTextBoxColumn tableProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn tableManufacturer;
         private System.Windows.Forms.DataGridViewTextBoxColumn tablePrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn tableQouta;
         private System.Windows.Forms.DataGridViewTextBoxColumn tableAvailbility;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tableMemberId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn indexP;
         private System.Windows.Forms.DataGridViewTextBoxColumn tableMemberName;
         private System.Windows.Forms.DataGridViewTextBoxColumn tableMemberSurname;
         private System.Windows.Forms.DataGridViewTextBoxColumn tablePhone;
-        private RoundPanel groupBox2;
-        private RoundPanel groupBox4;
-        private RoundPanel groupBox8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tableMemberId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn indexM;
 
     }
 }

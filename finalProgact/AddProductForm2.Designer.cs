@@ -40,9 +40,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblPathImage = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblAddProduct = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.filldData = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -57,6 +59,7 @@
             this.lblName.Size = new System.Drawing.Size(75, 25);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Name:";
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // tBoxName
             // 
@@ -65,6 +68,7 @@
             this.tBoxName.Name = "tBoxName";
             this.tBoxName.Size = new System.Drawing.Size(214, 30);
             this.tBoxName.TabIndex = 3;
+            this.tBoxName.TextChanged += new System.EventHandler(this.tBoxName_TextChanged);
             // 
             // tBoxManufacturer
             // 
@@ -73,6 +77,7 @@
             this.tBoxManufacturer.Name = "tBoxManufacturer";
             this.tBoxManufacturer.Size = new System.Drawing.Size(214, 30);
             this.tBoxManufacturer.TabIndex = 5;
+            this.tBoxManufacturer.TextChanged += new System.EventHandler(this.tBoxManufacturer_TextChanged);
             // 
             // lblManufacturer
             // 
@@ -83,6 +88,7 @@
             this.lblManufacturer.Size = new System.Drawing.Size(146, 25);
             this.lblManufacturer.TabIndex = 4;
             this.lblManufacturer.Text = "Manufacturer:";
+            this.lblManufacturer.Click += new System.EventHandler(this.lblManufacturer_Click);
             // 
             // tBoxlblPrice
             // 
@@ -91,6 +97,7 @@
             this.tBoxlblPrice.Name = "tBoxlblPrice";
             this.tBoxlblPrice.Size = new System.Drawing.Size(214, 30);
             this.tBoxlblPrice.TabIndex = 7;
+            this.tBoxlblPrice.TextChanged += new System.EventHandler(this.tBoxlblPrice_TextChanged);
             // 
             // lblPrice
             // 
@@ -101,6 +108,7 @@
             this.lblPrice.Size = new System.Drawing.Size(68, 25);
             this.lblPrice.TabIndex = 6;
             this.lblPrice.Text = "Price:";
+            this.lblPrice.Click += new System.EventHandler(this.lblPrice_Click);
             // 
             // tBoxQouta
             // 
@@ -109,6 +117,7 @@
             this.tBoxQouta.Name = "tBoxQouta";
             this.tBoxQouta.Size = new System.Drawing.Size(214, 30);
             this.tBoxQouta.TabIndex = 9;
+            this.tBoxQouta.TextChanged += new System.EventHandler(this.tBoxQouta_TextChanged);
             // 
             // lblQouta
             // 
@@ -119,6 +128,7 @@
             this.lblQouta.Size = new System.Drawing.Size(78, 25);
             this.lblQouta.TabIndex = 8;
             this.lblQouta.Text = "Qouta:";
+            this.lblQouta.Click += new System.EventHandler(this.lblQouta_Click);
             // 
             // lblUpload
             // 
@@ -129,6 +139,7 @@
             this.lblUpload.Size = new System.Drawing.Size(87, 25);
             this.lblUpload.TabIndex = 10;
             this.lblUpload.Text = "Upload:";
+            this.lblUpload.Click += new System.EventHandler(this.lblUpload_Click);
             // 
             // button1
             // 
@@ -139,6 +150,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "Upload";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -149,10 +161,12 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Submit";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Controls.Add(this.lblPathImage);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.lblAddProduct);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -161,6 +175,18 @@
             this.groupBox1.Size = new System.Drawing.Size(468, 338);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lblPathImage
+            // 
+            this.lblPathImage.AutoSize = true;
+            this.lblPathImage.Font = new System.Drawing.Font("Rockwell", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPathImage.Location = new System.Drawing.Point(82, 282);
+            this.lblPathImage.Name = "lblPathImage";
+            this.lblPathImage.Size = new System.Drawing.Size(0, 53);
+            this.lblPathImage.TabIndex = 4;
+            this.lblPathImage.Visible = false;
+            this.lblPathImage.Click += new System.EventHandler(this.lblPathImage_Click);
             // 
             // pictureBox1
             // 
@@ -171,6 +197,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblAddProduct
             // 
@@ -181,10 +208,12 @@
             this.lblAddProduct.Size = new System.Drawing.Size(284, 53);
             this.lblAddProduct.TabIndex = 3;
             this.lblAddProduct.Text = "Add Product";
+            this.lblAddProduct.Click += new System.EventHandler(this.lblAddProduct_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox2.Controls.Add(this.filldData);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.lblUpload);
@@ -199,15 +228,29 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 338);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(468, 392);
+            this.groupBox2.Size = new System.Drawing.Size(468, 406);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // filldData
+            // 
+            this.filldData.AutoSize = true;
+            this.filldData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filldData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.filldData.Location = new System.Drawing.Point(112, 372);
+            this.filldData.Name = "filldData";
+            this.filldData.Size = new System.Drawing.Size(227, 25);
+            this.filldData.TabIndex = 13;
+            this.filldData.Text = "All data must be filled out";
+            this.filldData.Visible = false;
+            this.filldData.Click += new System.EventHandler(this.filldData_Click);
             // 
             // AddProductForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(468, 730);
+            this.ClientSize = new System.Drawing.Size(468, 744);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "AddProductForm2";
@@ -238,5 +281,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblAddProduct;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label filldData;
+        private System.Windows.Forms.Label lblPathImage;
     }
 }
