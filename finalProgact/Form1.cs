@@ -40,6 +40,12 @@ namespace finalProgact
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            if(LoginForm.userNameText.Text != "admin"){
+                toolStripButton3.Visible = false;
+                tabControl1.TabPages.Remove(tabMember);
+            };
+            
              
             //this.dataGridView2.Rows.Insert(0, "one", "two", "three", "four");
             //this.pictureBox1.Image = Image.FromFile("C:\\Users\\user\\Pictures\\1.jpeg");
@@ -60,7 +66,7 @@ namespace finalProgact
 
             for (int i = 0; i < ListMembers.Count; i++)
             {
-                this.dataGridView1.Rows.Add(ListProduct[i][0], ListProduct[i][1], ListProduct[i][2], ListProduct[i][3],i);
+                this.dataGridView1.Rows.Add(ListMembers[i][0], ListMembers[i][1], ListMembers[i][2], ListMembers[i][3], i);
             }
             
 
@@ -207,6 +213,32 @@ namespace finalProgact
                 //MessageBox.Show(ListProduct[int.Parse(index)][6]);
             }
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butLogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form loginF = new LoginForm();
+            loginF.ShowDialog();
+            this.Close();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form loginF = new LoginForm();
+            loginF.ShowDialog();
+            this.Close();
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         

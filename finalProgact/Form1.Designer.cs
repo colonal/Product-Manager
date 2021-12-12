@@ -42,10 +42,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabMember = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tableMemberId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableMemberName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableMemberSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tablePhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableMemberId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.indexM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tabSell = new System.Windows.Forms.TabPage();
@@ -54,10 +54,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tabProfile = new System.Windows.Forms.TabPage();
+            this.butEdit = new System.Windows.Forms.Button();
+            this.butLogOut = new System.Windows.Forms.Button();
+            this.phoneProfile = new System.Windows.Forms.Label();
+            this.nameProfil = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.groupBox4 = new RoundPanel();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -67,11 +69,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox8 = new RoundPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureProfile = new System.Windows.Forms.PictureBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabProduct.SuspendLayout();
@@ -82,11 +90,13 @@
             this.groupBox6.SuspendLayout();
             this.tabSell.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.tabProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -95,7 +105,9 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
-            this.toolStripButton3});
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripButton5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1563, 75);
@@ -107,6 +119,7 @@
             this.tabControl1.Controls.Add(this.tabProduct);
             this.tabControl1.Controls.Add(this.tabMember);
             this.tabControl1.Controls.Add(this.tabSell);
+            this.tabControl1.Controls.Add(this.tabProfile);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -210,7 +223,7 @@
             this.tabMember.Location = new System.Drawing.Point(4, 31);
             this.tabMember.Name = "tabMember";
             this.tabMember.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMember.Size = new System.Drawing.Size(1555, 626);
+            this.tabMember.Size = new System.Drawing.Size(1555, 610);
             this.tabMember.TabIndex = 1;
             this.tabMember.Text = "Member";
             this.tabMember.UseVisualStyleBackColor = true;
@@ -219,20 +232,28 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tableMemberId,
             this.tableMemberName,
             this.tableMemberSurname,
             this.tablePhone,
-            this.tableMemberId,
             this.indexM});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1006, 620);
+            this.dataGridView1.Size = new System.Drawing.Size(1006, 604);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+            // 
+            // tableMemberId
+            // 
+            this.tableMemberId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tableMemberId.HeaderText = "Member Id";
+            this.tableMemberId.MinimumWidth = 20;
+            this.tableMemberId.Name = "tableMemberId";
+            this.tableMemberId.ReadOnly = true;
             // 
             // tableMemberName
             // 
@@ -258,14 +279,6 @@
             this.tablePhone.Name = "tablePhone";
             this.tablePhone.ReadOnly = true;
             // 
-            // tableMemberId
-            // 
-            this.tableMemberId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tableMemberId.HeaderText = "Member Id";
-            this.tableMemberId.MinimumWidth = 20;
-            this.tableMemberId.Name = "tableMemberId";
-            this.tableMemberId.ReadOnly = true;
-            // 
             // indexM
             // 
             this.indexM.HeaderText = "index";
@@ -280,7 +293,7 @@
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox6.Location = new System.Drawing.Point(1009, 3);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(543, 620);
+            this.groupBox6.Size = new System.Drawing.Size(543, 604);
             this.groupBox6.TabIndex = 8;
             this.groupBox6.TabStop = false;
             // 
@@ -289,22 +302,24 @@
             this.tabSell.Controls.Add(this.groupBox5);
             this.tabSell.Location = new System.Drawing.Point(4, 31);
             this.tabSell.Name = "tabSell";
-            this.tabSell.Size = new System.Drawing.Size(1555, 626);
+            this.tabSell.Size = new System.Drawing.Size(1555, 610);
             this.tabSell.TabIndex = 2;
             this.tabSell.Text = "Sell Product";
             this.tabSell.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
+            this.groupBox5.BackColor = System.Drawing.Color.DimGray;
             this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Controls.Add(this.label4);
             this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox5.Location = new System.Drawing.Point(0, 0);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1555, 626);
+            this.groupBox5.Size = new System.Drawing.Size(1555, 610);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Statistcs";
@@ -345,6 +360,68 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Total Product:";
             // 
+            // tabProfile
+            // 
+            this.tabProfile.BackColor = System.Drawing.Color.DimGray;
+            this.tabProfile.Controls.Add(this.butEdit);
+            this.tabProfile.Controls.Add(this.butLogOut);
+            this.tabProfile.Controls.Add(this.phoneProfile);
+            this.tabProfile.Controls.Add(this.nameProfil);
+            this.tabProfile.Controls.Add(this.pictureProfile);
+            this.tabProfile.Location = new System.Drawing.Point(4, 31);
+            this.tabProfile.Name = "tabProfile";
+            this.tabProfile.Padding = new System.Windows.Forms.Padding(3);
+            this.tabProfile.Size = new System.Drawing.Size(1555, 610);
+            this.tabProfile.TabIndex = 3;
+            this.tabProfile.Text = "Profile";
+            // 
+            // butEdit
+            // 
+            this.butEdit.BackColor = System.Drawing.Color.DimGray;
+            this.butEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butEdit.ForeColor = System.Drawing.SystemColors.Control;
+            this.butEdit.Location = new System.Drawing.Point(376, 432);
+            this.butEdit.Name = "butEdit";
+            this.butEdit.Size = new System.Drawing.Size(143, 48);
+            this.butEdit.TabIndex = 8;
+            this.butEdit.Text = "Edit";
+            this.butEdit.UseVisualStyleBackColor = false;
+            // 
+            // butLogOut
+            // 
+            this.butLogOut.BackColor = System.Drawing.Color.DimGray;
+            this.butLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.butLogOut.Location = new System.Drawing.Point(180, 432);
+            this.butLogOut.Name = "butLogOut";
+            this.butLogOut.Size = new System.Drawing.Size(143, 48);
+            this.butLogOut.TabIndex = 7;
+            this.butLogOut.Text = "LogOut";
+            this.butLogOut.UseVisualStyleBackColor = false;
+            this.butLogOut.Click += new System.EventHandler(this.butLogOut_Click);
+            // 
+            // phoneProfile
+            // 
+            this.phoneProfile.AutoSize = true;
+            this.phoneProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneProfile.ForeColor = System.Drawing.SystemColors.Control;
+            this.phoneProfile.Location = new System.Drawing.Point(176, 332);
+            this.phoneProfile.Name = "phoneProfile";
+            this.phoneProfile.Size = new System.Drawing.Size(120, 32);
+            this.phoneProfile.TabIndex = 2;
+            this.phoneProfile.Text = "Phone: ";
+            // 
+            // nameProfil
+            // 
+            this.nameProfil.AutoSize = true;
+            this.nameProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameProfil.ForeColor = System.Drawing.SystemColors.Control;
+            this.nameProfil.Location = new System.Drawing.Point(176, 263);
+            this.nameProfil.Name = "nameProfil";
+            this.nameProfil.Size = new System.Drawing.Size(119, 32);
+            this.nameProfil.TabIndex = 1;
+            this.nameProfil.Text = "Name : ";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -355,39 +432,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = global::finalProgact.Properties.Resources.add1;
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(96, 72);
-            this.toolStripButton1.Text = "Add Product";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = global::finalProgact.Properties.Resources.user1;
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(101, 72);
-            this.toolStripButton2.Text = "Add Mumbur";
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Image = global::finalProgact.Properties.Resources.sell;
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(92, 72);
-            this.toolStripButton3.Text = "Sell Product";
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // groupBox4
             // 
@@ -502,6 +546,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Search Box";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 174);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(537, 207);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
             // groupBox8
             // 
             this.groupBox8.BackColor = System.Drawing.Color.Cyan;
@@ -525,7 +580,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(397, 62);
+            this.button4.Location = new System.Drawing.Point(427, 69);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(104, 38);
             this.button4.TabIndex = 2;
@@ -535,7 +590,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(172, 66);
+            this.textBox2.Location = new System.Drawing.Point(195, 77);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(213, 30);
             this.textBox2.TabIndex = 1;
@@ -544,22 +599,79 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 62);
+            this.label6.Location = new System.Drawing.Point(3, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(159, 25);
             this.label6.TabIndex = 0;
             this.label6.Text = "Sersh  Mumber";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // pictureBox2
+            // pictureProfile
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 174);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(537, 207);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.pictureProfile.InitialImage = null;
+            this.pictureProfile.Location = new System.Drawing.Point(182, 19);
+            this.pictureProfile.Name = "pictureProfile";
+            this.pictureProfile.Size = new System.Drawing.Size(421, 200);
+            this.pictureProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureProfile.TabIndex = 6;
+            this.pictureProfile.TabStop = false;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::finalProgact.Properties.Resources.add1;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(96, 72);
+            this.toolStripButton1.Text = "Add Product";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = global::finalProgact.Properties.Resources.user1;
+            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(101, 72);
+            this.toolStripButton2.Text = "Add Mumbur";
+            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = global::finalProgact.Properties.Resources.sell;
+            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(92, 72);
+            this.toolStripButton3.Text = "Sell Product";
+            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = global::finalProgact.Properties.Resources.log_out;
+            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(62, 72);
+            this.toolStripButton4.Text = "LogOut";
+            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton5.ForeColor = System.Drawing.Color.Red;
+            this.toolStripButton5.Image = global::finalProgact.Properties.Resources.cancel;
+            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(52, 72);
+            this.toolStripButton5.Text = "Exit";
+            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // Form1
             // 
@@ -584,14 +696,17 @@
             this.tabSell.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.tabProfile.ResumeLayout(false);
+            this.tabProfile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -635,13 +750,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tableQouta;
         private System.Windows.Forms.DataGridViewTextBoxColumn tableAvailbility;
         private System.Windows.Forms.DataGridViewTextBoxColumn indexP;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TabPage tabProfile;
+        private System.Windows.Forms.Label nameProfil;
+        private System.Windows.Forms.Label phoneProfile;
+        private System.Windows.Forms.PictureBox pictureProfile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tableMemberId;
         private System.Windows.Forms.DataGridViewTextBoxColumn tableMemberName;
         private System.Windows.Forms.DataGridViewTextBoxColumn tableMemberSurname;
         private System.Windows.Forms.DataGridViewTextBoxColumn tablePhone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tableMemberId;
         private System.Windows.Forms.DataGridViewTextBoxColumn indexM;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button butEdit;
+        private System.Windows.Forms.Button butLogOut;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
 
     }
 }
