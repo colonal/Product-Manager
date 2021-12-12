@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabProduct = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -45,6 +42,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabMember = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tableMemberName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableMemberSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tablePhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableMemberId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.indexM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tabSell = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -52,6 +54,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.groupBox4 = new RoundPanel();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -65,11 +71,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.tableMemberName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableMemberSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tablePhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableMemberId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.indexM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabProduct.SuspendLayout();
@@ -80,9 +82,11 @@
             this.groupBox6.SuspendLayout();
             this.tabSell.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -97,39 +101,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(1563, 75);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = global::finalProgact.Properties.Resources.add1;
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(96, 72);
-            this.toolStripButton1.Text = "Add Product";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = global::finalProgact.Properties.Resources.user1;
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(101, 72);
-            this.toolStripButton2.Text = "Add Mumbur";
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Image = global::finalProgact.Properties.Resources.sell;
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(92, 72);
-            this.toolStripButton3.Text = "Sell Product";
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // tabControl1
             // 
@@ -174,6 +145,7 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(1006, 620);
             this.dataGridView2.TabIndex = 10;
+            this.dataGridView2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
             this.dataGridView2.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseDoubleClick);
             this.dataGridView2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView2_KeyDown);
             // 
@@ -221,6 +193,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
@@ -258,11 +231,51 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1006, 620);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
-            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
+            // 
+            // tableMemberName
+            // 
+            this.tableMemberName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tableMemberName.HeaderText = "Member Name";
+            this.tableMemberName.MinimumWidth = 20;
+            this.tableMemberName.Name = "tableMemberName";
+            this.tableMemberName.ReadOnly = true;
+            // 
+            // tableMemberSurname
+            // 
+            this.tableMemberSurname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tableMemberSurname.HeaderText = "Member Surname";
+            this.tableMemberSurname.MinimumWidth = 20;
+            this.tableMemberSurname.Name = "tableMemberSurname";
+            this.tableMemberSurname.ReadOnly = true;
+            // 
+            // tablePhone
+            // 
+            this.tablePhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tablePhone.HeaderText = "Phone";
+            this.tablePhone.MinimumWidth = 20;
+            this.tablePhone.Name = "tablePhone";
+            this.tablePhone.ReadOnly = true;
+            // 
+            // tableMemberId
+            // 
+            this.tableMemberId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tableMemberId.HeaderText = "Member Id";
+            this.tableMemberId.MinimumWidth = 20;
+            this.tableMemberId.Name = "tableMemberId";
+            this.tableMemberId.ReadOnly = true;
+            // 
+            // indexM
+            // 
+            this.indexM.HeaderText = "index";
+            this.indexM.Name = "indexM";
+            this.indexM.ReadOnly = true;
+            this.indexM.Visible = false;
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.pictureBox2);
             this.groupBox6.Controls.Add(this.groupBox8);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox6.Location = new System.Drawing.Point(1009, 3);
@@ -332,6 +345,50 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Total Product:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 380);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(537, 207);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::finalProgact.Properties.Resources.add1;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(96, 72);
+            this.toolStripButton1.Text = "Add Product";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = global::finalProgact.Properties.Resources.user1;
+            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(101, 72);
+            this.toolStripButton2.Text = "Add Mumbur";
+            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = global::finalProgact.Properties.Resources.sell;
+            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(92, 72);
+            this.toolStripButton3.Text = "Sell Product";
+            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -339,10 +396,11 @@
             this.groupBox4.Controls.Add(this.radioButton2);
             this.groupBox4.Controls.Add(this.radioButton1);
             this.groupBox4.Controls.Add(this.button2);
-            this.groupBox4.Location = new System.Drawing.Point(6, 216);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox4.Location = new System.Drawing.Point(3, 213);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Radious = 25;
-            this.groupBox4.Size = new System.Drawing.Size(530, 167);
+            this.groupBox4.Size = new System.Drawing.Size(537, 167);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "List Box";
@@ -402,10 +460,11 @@
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(6, 21);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Location = new System.Drawing.Point(3, 24);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Radious = 25;
-            this.groupBox2.Size = new System.Drawing.Size(530, 189);
+            this.groupBox2.Size = new System.Drawing.Size(537, 189);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sersh Box";
@@ -449,10 +508,11 @@
             this.groupBox8.Controls.Add(this.button4);
             this.groupBox8.Controls.Add(this.textBox2);
             this.groupBox8.Controls.Add(this.label6);
-            this.groupBox8.Location = new System.Drawing.Point(6, 21);
+            this.groupBox8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox8.Location = new System.Drawing.Point(3, 24);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Radious = 25;
-            this.groupBox8.Size = new System.Drawing.Size(530, 150);
+            this.groupBox8.Size = new System.Drawing.Size(537, 150);
             this.groupBox8.TabIndex = 0;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Sersh for Mumber";
@@ -490,44 +550,16 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Sersh  Mumber";
             // 
-            // tableMemberName
+            // pictureBox2
             // 
-            this.tableMemberName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tableMemberName.HeaderText = "Member Name";
-            this.tableMemberName.MinimumWidth = 20;
-            this.tableMemberName.Name = "tableMemberName";
-            this.tableMemberName.ReadOnly = true;
-            // 
-            // tableMemberSurname
-            // 
-            this.tableMemberSurname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tableMemberSurname.HeaderText = "Member Surname";
-            this.tableMemberSurname.MinimumWidth = 20;
-            this.tableMemberSurname.Name = "tableMemberSurname";
-            this.tableMemberSurname.ReadOnly = true;
-            // 
-            // tablePhone
-            // 
-            this.tablePhone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tablePhone.HeaderText = "Phone";
-            this.tablePhone.MinimumWidth = 20;
-            this.tablePhone.Name = "tablePhone";
-            this.tablePhone.ReadOnly = true;
-            // 
-            // tableMemberId
-            // 
-            this.tableMemberId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tableMemberId.HeaderText = "Member Id";
-            this.tableMemberId.MinimumWidth = 20;
-            this.tableMemberId.Name = "tableMemberId";
-            this.tableMemberId.ReadOnly = true;
-            // 
-            // indexM
-            // 
-            this.indexM.HeaderText = "index";
-            this.indexM.Name = "indexM";
-            this.indexM.ReadOnly = true;
-            this.indexM.Visible = false;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 174);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(537, 207);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
@@ -552,12 +584,14 @@
             this.tabSell.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,6 +640,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tablePhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn tableMemberId;
         private System.Windows.Forms.DataGridViewTextBoxColumn indexM;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
 
     }
 }

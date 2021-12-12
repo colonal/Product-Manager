@@ -36,6 +36,11 @@ namespace finalProgact
             {
                 this.comBoxMember.Items.Add(i[1]);
             }
+
+            this.comBoxProduct.SelectedIndex = 0;
+            this.comBoxMember.SelectedIndex = 0;
+
+
             
         }
 
@@ -59,6 +64,7 @@ namespace finalProgact
                 }
                 
             }
+            this.comQuantity.SelectedIndex = 0;
         }
     }
 }
