@@ -15,8 +15,10 @@ namespace finalProgact
         public static  Form1 instance;
         public List<List<string>> ListProduct = new List<List<string>>();
         public List<List<string>> ListMembers = new List<List<string>>();
+        public List<string> ListProfile = new List<string>();
         public DataGridView DGV;
         public DataGridView DGV2;
+        public int indexProfile = -999;
 
         List<String> ListImage = new List<string>();
         public Form1()
@@ -41,10 +43,10 @@ namespace finalProgact
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            if(LoginForm.userNameText.Text != "admin"){
-                toolStripButton3.Visible = false;
-                tabControl1.TabPages.Remove(tabMember);
-            };
+            //if(LoginForm.userNameText.Text != "admin"){
+            //    toolStripButton3.Visible = false;
+            //    tabControl1.TabPages.Remove(tabMember);
+            //};
             
              
             //this.dataGridView2.Rows.Insert(0, "one", "two", "three", "four");
@@ -55,6 +57,8 @@ namespace finalProgact
             ListProduct.Add(new List<string> { "2", "Iphon 8", "Apple", " 700", "10", "Avilable", "C:\\Users\\user\\Pictures\\3.jpg" });
             ListProduct.Add(new List<string> { "2", "Iphon 9", "Apple", " 800", "15", "Avilable", "C:\\Users\\user\\Pictures\\2.jpg" });
 
+            
+
             for (int i = 0; i < ListProduct.Count; i++) 
             {
                 this.dataGridView2.Rows.Add(ListProduct[i][1], ListProduct[i][2], ListProduct[i][3], ListProduct[i][4], ListProduct[i][5],i);
@@ -64,12 +68,20 @@ namespace finalProgact
             ListMembers.Add(new List<string> { "1", "mohammad", " cc", "+9555544", "C:\\Users\\user\\Pictures\\2.jpg" });
             ListMembers.Add(new List<string> { "2", "Ali", " ss", "+95355324", "C:\\Users\\user\\Pictures\\3.jpg" });
 
+            ListProfile = new List<String> { "2", "Ali", " ss", "+95355324", "C:\\Users\\user\\Pictures\\3.jpg" };
+
             for (int i = 0; i < ListMembers.Count; i++)
             {
+                if (Enumerable.SequenceEqual(ListProfile, ListMembers[i])) {
+                    indexProfile = i;
+                }else
                 this.dataGridView1.Rows.Add(ListMembers[i][0], ListMembers[i][1], ListMembers[i][2], ListMembers[i][3], i);
             }
-            
 
+
+            pictureProfile.Image = Image.FromFile(ListProfile[4]);
+            nameProfil.Text = ListProfile[1] + ListProfile[2];
+            phoneProfile.Text =  ListProfile[3];
 
         }
 
@@ -120,6 +132,7 @@ namespace finalProgact
 
         private void dataGridView2_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            MessageBox.Show("DoubleClick");
             dataGridView2_Prosses();
         }
 
@@ -134,7 +147,7 @@ namespace finalProgact
 
                 MessageBox.Show(" List index:" + dataGridView2.Rows[dataGridView2.CurrentCell.RowIndex].Cells["indexP"].Value.ToString() + " RowIndex:" + dataGridView2.CurrentCell.RowIndex.ToString());
                 string index = dataGridView2.Rows[dataGridView2.CurrentCell.RowIndex].Cells["indexP"].Value.ToString();
-                Form editProduct = new UpdataProduct(ListProduct[int.Parse(index)]);
+                Form editProduct = new UpdataProduct(ListProduct[int.Parse(index)], int.Parse(dataGridView2.Rows[dataGridView2.CurrentCell.RowIndex].Cells["indexP"].Value.ToString()), int.Parse(dataGridView2.CurrentCell.RowIndex.ToString()));
                 editProduct.ShowDialog();
             }
         }
@@ -157,7 +170,7 @@ namespace finalProgact
 
                 MessageBox.Show(" List index:" + dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells["indexM"].Value.ToString() + " RowIndex:" + dataGridView1.CurrentCell.RowIndex.ToString());
                 string index = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells["indexM"].Value.ToString();
-                Form displayMember = new DisplayMember(ListProduct[int.Parse(index)]);
+                Form displayMember = new DisplayMember(ListMembers[int.Parse(index)], int.Parse(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells["indexM"].Value.ToString()), int.Parse(dataGridView1.CurrentCell.RowIndex.ToString()));
                 displayMember.ShowDialog();
             }
         }
@@ -168,19 +181,28 @@ namespace finalProgact
             if (dataGridView2.CurrentCell.RowIndex < ListProduct.Count)
             {
                 string index = dataGridView2.Rows[dataGridView2.CurrentCell.RowIndex].Cells["indexP"].Value.ToString();
-                String checkImage = chackPathImage(ListProduct[int.Parse(index)][6]);
+                //MessageBox.Show(ListProduct[int.Parse(index)].ToString());
+                //MessageBox.Show(index.ToString());
+                //MessageBox.Show(ListProduct.Count().ToString());
+                //String checkImage = chackPathImage(ListProduct[int.Parse(index)][6]);
                 
-                if (checkImage != "")
-                    this.pictureBox1.Image = Image.FromFile(checkImage);
+                //if (checkImage != "")
+                    //this.pictureBox1.Image = Image.FromFile(checkImage);
                 //MessageBox.Show(ListProduct[int.Parse(index)][6]);
+                try {
+                    this.pictureBox1.Image = Image.FromFile(ListProduct[int.Parse(index)][6]);
+                }
+                catch {
+                    this.pictureBox1.Image = Image.FromFile("..\\..\\icons\\members.png");
+                }
             }
         }
 
 
 
-        private String chackPathImage(String path)
+        private String chackPathImage1(String path)
         {
-
+            //MessageBox.Show(path);
             if (ListImage.Contains(path) == false)
             {
                 try
@@ -189,28 +211,42 @@ namespace finalProgact
                     {
                         // File/Stream manipulating code here
                         ListImage.Add(path);
+                        stream.Close();
                         return path;
                     }
+                    
                 }
                 catch
                 {
                     //check here why it failed and ask user to retry if the file is in use.
+                    //MessageBox.Show("catch");
                     return "";
                 }
             }
+            //MessageBox.Show("False");
             return path;
         }
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (dataGridView1.CurrentCell.RowIndex < ListMembers.Count)
+            if (dataGridView1.CurrentCell.RowIndex < ListMembers.Count  )
             {
                 string index = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells["indexM"].Value.ToString();
-                String checkImage = chackPathImage(ListMembers[int.Parse(index)][4]);
+                //MessageBox.Show(index.ToString());
+                //MessageBox.Show(ListMembers.Count().ToString());
+                //String checkImage = chackPathImage(ListMembers[int.Parse(index)][4]);
+                
 
-                if (checkImage != "")
-                    this.pictureBox2.Image = Image.FromFile(checkImage);
+                //if (checkImage != "")
+                    //this.pictureBox2.Image = Image.FromFile(checkImage);
                 //MessageBox.Show(ListProduct[int.Parse(index)][6]);
+
+                try {
+                    this.pictureBox2.Image = Image.FromFile(ListMembers[int.Parse(index)][4]);
+                }
+                catch {
+                    this.pictureBox2.Image = Image.FromFile("..\\..\\icons\\members.png");
+                }
             }
 
         }
@@ -239,6 +275,21 @@ namespace finalProgact
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void butEdit_Click(object sender, EventArgs e)
+        {
+            Form displayMember = new DisplayProfile(ListProfile);
+            displayMember.ShowDialog();
+
+            ListMembers[indexProfile] =   ListProfile;
+
+            pictureProfile.Image = Image.FromFile(ListProfile[4]);
+            nameProfil.Text =  ListProfile[1] + ListProfile[2];
+            phoneProfile.Text = ListProfile[3];
+
+
+
         }
 
         

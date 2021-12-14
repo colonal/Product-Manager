@@ -13,10 +13,14 @@ namespace finalProgact
     public partial class DisplayMember : Form
     {
         public List<String> ListMembers;
-        public DisplayMember(List<String> l)
+        public int index;
+        public int indexTabl;
+        public DisplayMember(List<String> l,int i,int it)
         {
             InitializeComponent();
             ListMembers = l;
+            index = i;
+            indexTabl = it;
         }
 
         private void filldData_Click(object sender, EventArgs e)
@@ -33,25 +37,19 @@ namespace finalProgact
             
 
 
-            lblPathImage.Text = chackPathImage(ListMembers[4]);
-            pictureBox1.Image = Image.FromFile(chackPathImage(ListMembers[4]));
-        }
-        static String chackPathImage(String path)
-        {
+            
             try
             {
-                using (Stream stream = new FileStream(path, FileMode.Open))
-                {
-                    // File/Stream manipulating code here
-                    return path;
-                }
+                pictureBox1.Image = Image.FromFile(ListMembers[4]);
+                lblPathImage.Text = ListMembers[4];
             }
-            catch
-            {
-                //check here why it failed and ask user to retry if the file is in use.
-                return "..\\..\\icons\\members.png";
+            catch {
+                pictureBox1.Image = Image.FromFile("..\\..\\icons\\members.png");
+                lblPathImage.Text = "..\\..\\icons\\members.png";
             }
+
         }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -66,6 +64,34 @@ namespace finalProgact
                 lblPathImage.Text = open.FileName;
 
             } 
+        }
+
+        private void butUpdate_Click(object sender, EventArgs e)
+        {
+            // "1", "mohammad", " cc", "+9555544", "C:\\Users\\user\\Pictures\\2.jpg"
+
+            if (
+                this.tBoxName.Text != "" &&
+                this.tBoxSurName.Text != "" &&
+                this.tBoxPhone.Text != ""
+                )
+            {
+                Form1.instance.ListMembers[0] = new List<string> { ListMembers[0], tBoxName.Text, tBoxSurName.Text, tBoxPhone.Text, lblPathImage.Text };
+
+                DataTable dt = (DataTable)Form1.instance.DGV.DataSource;
+
+
+                Form1.instance.DGV2.Rows[indexTabl].Cells[1].Value = tBoxName.Text;
+                Form1.instance.DGV2.Rows[indexTabl].Cells[2].Value = tBoxSurName.Text;
+                Form1.instance.DGV2.Rows[indexTabl].Cells[3].Value = tBoxPhone.Text;
+
+                MessageBox.Show("successful update");
+            }
+            else
+            {
+                this.filldData.Visible = true;
+
+            }
         }
     }
 }

@@ -57,9 +57,16 @@
             this.tabProfile = new System.Windows.Forms.TabPage();
             this.butEdit = new System.Windows.Forms.Button();
             this.butLogOut = new System.Windows.Forms.Button();
-            this.phoneProfile = new System.Windows.Forms.Label();
-            this.nameProfil = new System.Windows.Forms.Label();
+            this.phoneProfile1 = new System.Windows.Forms.Label();
+            this.nameProfil1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureProfile = new System.Windows.Forms.PictureBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.groupBox4 = new RoundPanel();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -69,17 +76,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox8 = new RoundPanel();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureProfile = new System.Windows.Forms.PictureBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.nameProfil = new System.Windows.Forms.Label();
+            this.phoneProfile = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabProduct.SuspendLayout();
@@ -92,11 +94,11 @@
             this.groupBox5.SuspendLayout();
             this.tabProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -223,7 +225,7 @@
             this.tabMember.Location = new System.Drawing.Point(4, 31);
             this.tabMember.Name = "tabMember";
             this.tabMember.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMember.Size = new System.Drawing.Size(1555, 610);
+            this.tabMember.Size = new System.Drawing.Size(1555, 626);
             this.tabMember.TabIndex = 1;
             this.tabMember.Text = "Member";
             this.tabMember.UseVisualStyleBackColor = true;
@@ -242,7 +244,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1006, 604);
+            this.dataGridView1.Size = new System.Drawing.Size(1006, 620);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
@@ -293,7 +295,7 @@
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox6.Location = new System.Drawing.Point(1009, 3);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(543, 604);
+            this.groupBox6.Size = new System.Drawing.Size(543, 620);
             this.groupBox6.TabIndex = 8;
             this.groupBox6.TabStop = false;
             // 
@@ -302,7 +304,7 @@
             this.tabSell.Controls.Add(this.groupBox5);
             this.tabSell.Location = new System.Drawing.Point(4, 31);
             this.tabSell.Name = "tabSell";
-            this.tabSell.Size = new System.Drawing.Size(1555, 610);
+            this.tabSell.Size = new System.Drawing.Size(1555, 626);
             this.tabSell.TabIndex = 2;
             this.tabSell.Text = "Sell Product";
             this.tabSell.UseVisualStyleBackColor = true;
@@ -319,7 +321,7 @@
             this.groupBox5.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox5.Location = new System.Drawing.Point(0, 0);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1555, 610);
+            this.groupBox5.Size = new System.Drawing.Size(1555, 626);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Statistcs";
@@ -363,15 +365,17 @@
             // tabProfile
             // 
             this.tabProfile.BackColor = System.Drawing.Color.DimGray;
-            this.tabProfile.Controls.Add(this.butEdit);
-            this.tabProfile.Controls.Add(this.butLogOut);
             this.tabProfile.Controls.Add(this.phoneProfile);
             this.tabProfile.Controls.Add(this.nameProfil);
+            this.tabProfile.Controls.Add(this.butEdit);
+            this.tabProfile.Controls.Add(this.butLogOut);
+            this.tabProfile.Controls.Add(this.phoneProfile1);
+            this.tabProfile.Controls.Add(this.nameProfil1);
             this.tabProfile.Controls.Add(this.pictureProfile);
             this.tabProfile.Location = new System.Drawing.Point(4, 31);
             this.tabProfile.Name = "tabProfile";
             this.tabProfile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProfile.Size = new System.Drawing.Size(1555, 610);
+            this.tabProfile.Size = new System.Drawing.Size(1555, 626);
             this.tabProfile.TabIndex = 3;
             this.tabProfile.Text = "Profile";
             // 
@@ -386,6 +390,7 @@
             this.butEdit.TabIndex = 8;
             this.butEdit.Text = "Edit";
             this.butEdit.UseVisualStyleBackColor = false;
+            this.butEdit.Click += new System.EventHandler(this.butEdit_Click);
             // 
             // butLogOut
             // 
@@ -400,27 +405,27 @@
             this.butLogOut.UseVisualStyleBackColor = false;
             this.butLogOut.Click += new System.EventHandler(this.butLogOut_Click);
             // 
-            // phoneProfile
+            // phoneProfile1
             // 
-            this.phoneProfile.AutoSize = true;
-            this.phoneProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneProfile.ForeColor = System.Drawing.SystemColors.Control;
-            this.phoneProfile.Location = new System.Drawing.Point(176, 332);
-            this.phoneProfile.Name = "phoneProfile";
-            this.phoneProfile.Size = new System.Drawing.Size(120, 32);
-            this.phoneProfile.TabIndex = 2;
-            this.phoneProfile.Text = "Phone: ";
+            this.phoneProfile1.AutoSize = true;
+            this.phoneProfile1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneProfile1.ForeColor = System.Drawing.SystemColors.Control;
+            this.phoneProfile1.Location = new System.Drawing.Point(176, 332);
+            this.phoneProfile1.Name = "phoneProfile1";
+            this.phoneProfile1.Size = new System.Drawing.Size(120, 32);
+            this.phoneProfile1.TabIndex = 2;
+            this.phoneProfile1.Text = "Phone: ";
             // 
-            // nameProfil
+            // nameProfil1
             // 
-            this.nameProfil.AutoSize = true;
-            this.nameProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameProfil.ForeColor = System.Drawing.SystemColors.Control;
-            this.nameProfil.Location = new System.Drawing.Point(176, 263);
-            this.nameProfil.Name = "nameProfil";
-            this.nameProfil.Size = new System.Drawing.Size(119, 32);
-            this.nameProfil.TabIndex = 1;
-            this.nameProfil.Text = "Name : ";
+            this.nameProfil1.AutoSize = true;
+            this.nameProfil1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameProfil1.ForeColor = System.Drawing.SystemColors.Control;
+            this.nameProfil1.Location = new System.Drawing.Point(176, 263);
+            this.nameProfil1.Name = "nameProfil1";
+            this.nameProfil1.Size = new System.Drawing.Size(119, 32);
+            this.nameProfil1.TabIndex = 1;
+            this.nameProfil1.Text = "Name : ";
             // 
             // pictureBox1
             // 
@@ -432,6 +437,84 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 174);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(537, 207);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureProfile
+            // 
+            this.pictureProfile.InitialImage = null;
+            this.pictureProfile.Location = new System.Drawing.Point(182, 19);
+            this.pictureProfile.Name = "pictureProfile";
+            this.pictureProfile.Size = new System.Drawing.Size(421, 200);
+            this.pictureProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureProfile.TabIndex = 6;
+            this.pictureProfile.TabStop = false;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = global::finalProgact.Properties.Resources.add1;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(96, 72);
+            this.toolStripButton1.Text = "Add Product";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = global::finalProgact.Properties.Resources.user1;
+            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(101, 72);
+            this.toolStripButton2.Text = "Add Mumbur";
+            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = global::finalProgact.Properties.Resources.sell;
+            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(92, 72);
+            this.toolStripButton3.Text = "Sell Product";
+            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = global::finalProgact.Properties.Resources.log_out;
+            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(62, 72);
+            this.toolStripButton4.Text = "LogOut";
+            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton5.ForeColor = System.Drawing.Color.Red;
+            this.toolStripButton5.Image = global::finalProgact.Properties.Resources.cancel;
+            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(52, 72);
+            this.toolStripButton5.Text = "Exit";
+            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // groupBox4
             // 
@@ -546,17 +629,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Search Box";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 174);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(537, 207);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
             // groupBox8
             // 
             this.groupBox8.BackColor = System.Drawing.Color.Cyan;
@@ -606,72 +678,27 @@
             this.label6.Text = "Sersh  Mumber";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // pictureProfile
+            // nameProfil
             // 
-            this.pictureProfile.InitialImage = null;
-            this.pictureProfile.Location = new System.Drawing.Point(182, 19);
-            this.pictureProfile.Name = "pictureProfile";
-            this.pictureProfile.Size = new System.Drawing.Size(421, 200);
-            this.pictureProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureProfile.TabIndex = 6;
-            this.pictureProfile.TabStop = false;
+            this.nameProfil.AutoSize = true;
+            this.nameProfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameProfil.ForeColor = System.Drawing.SystemColors.Control;
+            this.nameProfil.Location = new System.Drawing.Point(303, 263);
+            this.nameProfil.Name = "nameProfil";
+            this.nameProfil.Size = new System.Drawing.Size(119, 32);
+            this.nameProfil.TabIndex = 9;
+            this.nameProfil.Text = "Name : ";
             // 
-            // toolStripButton1
+            // phoneProfile
             // 
-            this.toolStripButton1.Image = global::finalProgact.Properties.Resources.add1;
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(96, 72);
-            this.toolStripButton1.Text = "Add Product";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = global::finalProgact.Properties.Resources.user1;
-            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(101, 72);
-            this.toolStripButton2.Text = "Add Mumbur";
-            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.Image = global::finalProgact.Properties.Resources.sell;
-            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(92, 72);
-            this.toolStripButton3.Text = "Sell Product";
-            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Image = global::finalProgact.Properties.Resources.log_out;
-            this.toolStripButton4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(62, 72);
-            this.toolStripButton4.Text = "LogOut";
-            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton5.ForeColor = System.Drawing.Color.Red;
-            this.toolStripButton5.Image = global::finalProgact.Properties.Resources.cancel;
-            this.toolStripButton5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(52, 72);
-            this.toolStripButton5.Text = "Exit";
-            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            this.phoneProfile.AutoSize = true;
+            this.phoneProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneProfile.ForeColor = System.Drawing.SystemColors.Control;
+            this.phoneProfile.Location = new System.Drawing.Point(303, 332);
+            this.phoneProfile.Name = "phoneProfile";
+            this.phoneProfile.Size = new System.Drawing.Size(120, 32);
+            this.phoneProfile.TabIndex = 10;
+            this.phoneProfile.Text = "Phone: ";
             // 
             // Form1
             // 
@@ -699,14 +726,14 @@
             this.tabProfile.ResumeLayout(false);
             this.tabProfile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -753,8 +780,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TabPage tabProfile;
-        private System.Windows.Forms.Label nameProfil;
-        private System.Windows.Forms.Label phoneProfile;
+        private System.Windows.Forms.Label nameProfil1;
+        private System.Windows.Forms.Label phoneProfile1;
         private System.Windows.Forms.PictureBox pictureProfile;
         private System.Windows.Forms.DataGridViewTextBoxColumn tableMemberId;
         private System.Windows.Forms.DataGridViewTextBoxColumn tableMemberName;
@@ -765,6 +792,8 @@
         private System.Windows.Forms.Button butLogOut;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.Label phoneProfile;
+        private System.Windows.Forms.Label nameProfil;
 
     }
 }

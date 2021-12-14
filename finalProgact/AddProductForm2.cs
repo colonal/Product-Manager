@@ -36,7 +36,7 @@ namespace finalProgact
                 //DataM.ListProduct.Add(new List<string> { "1", this.tBoxName.Text, this.tBoxManufacturer.Text, this.tBoxlblPrice.Text, this.tBoxQouta.Text, "Avilable", lblPathImage.Text });
                 Form1.instance.ListProduct.Add(new List<string> { "1", this.tBoxName.Text, this.tBoxManufacturer.Text, this.tBoxlblPrice.Text, this.tBoxQouta.Text, "Avilable", lblPathImage.Text });
 
-                Form1.instance.DGV.Rows.Add(this.tBoxName.Text, this.tBoxManufacturer.Text, this.tBoxlblPrice.Text, this.tBoxQouta.Text, "Avilable", this.lblPathImage.Text);
+                Form1.instance.DGV.Rows.Add(this.tBoxName.Text, this.tBoxManufacturer.Text, this.tBoxlblPrice.Text, this.tBoxQouta.Text, "Avilable",  Form1.instance.ListProduct.Count()-1,this.lblPathImage.Text);
 
                 this.tBoxName.Text = "" ;
                 this.tBoxManufacturer.Text = "" ;

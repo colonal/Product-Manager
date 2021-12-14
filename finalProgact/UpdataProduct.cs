@@ -13,10 +13,14 @@ namespace finalProgact
     public partial class UpdataProduct : Form
     {
         public List<String> ListProduct;
-        public UpdataProduct(List<String> l)
+        public int index;
+        public int indexTabl;
+        public UpdataProduct(List<String> l,int i,int it)
         {
             InitializeComponent();
             ListProduct = l;
+            index = i;
+            indexTabl = it;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,10 +45,17 @@ namespace finalProgact
             tBoxlblPrice.Text = ListProduct[3];
             tBoxQouta.Text = ListProduct[4];
 
-
-            lblPathImage.Text = chackPathImage(ListProduct[6]);
-            pictureBox1.Image = Image.FromFile(chackPathImage(ListProduct[6]));
-
+            try
+            {
+                pictureBox1.Image = Image.FromFile(ListProduct[6]);
+                lblPathImage.Text = ListProduct[6];
+                
+            }
+            catch {
+                pictureBox1.Image = Image.FromFile("..\\..\\icons\\addproduct.png");
+                lblPathImage.Text = "..\\..\\icons\\addproduct.png";
+                
+            }
             //MessageBox.Show(chackPathImage(ListProduct[6]));
             
             
@@ -59,20 +70,37 @@ namespace finalProgact
         }
 
 
-        static String chackPathImage(String path)
+        
+
+        private void button3_Click(object sender, EventArgs e)
         {
-            try
+            if (
+                this.tBoxName.Text != "" &&
+                this.tBoxManufacturer.Text != "" &&
+                this.tBoxlblPrice.Text != "" &&
+                this.tBoxQouta.Text != ""
+                )
             {
-                using (Stream stream = new FileStream(path, FileMode.Open))
-                {
-                    // File/Stream manipulating code here
-                    return path;
-                }
+                MessageBox.Show(index.ToString());
+                // { "1", "Asus F15", " ASUS", "900", "20", "Avilable", "C:\\Users\\user\\Pictures\\2.jpg" }
+
+                Form1.instance.ListProduct[0] = new List<string> { ListProduct[0], tBoxName.Text, tBoxManufacturer.Text, tBoxlblPrice.Text, tBoxQouta.Text, comboBox1.SelectedItem.ToString(), lblPathImage.Text };
+
+                DataTable dt = (DataTable)Form1.instance.DGV.DataSource;
+
+                //Form1.instance.DGV.Rows[indexTabl].Cells[0].Value = tBoxName.Text;
+                Form1.instance.DGV.Rows[indexTabl].Cells[0].Value = tBoxName.Text;
+                Form1.instance.DGV.Rows[indexTabl].Cells[1].Value = tBoxManufacturer.Text;
+                Form1.instance.DGV.Rows[indexTabl].Cells[2].Value = tBoxlblPrice.Text;
+                Form1.instance.DGV.Rows[indexTabl].Cells[3].Value = tBoxQouta.Text;
+                Form1.instance.DGV.Rows[indexTabl].Cells[4].Value = comboBox1.SelectedItem.ToString();
+                //Form1.instance.DGV.Rows[indexTabl].Cells[6].Value = inde;
+                MessageBox.Show("successful update");
             }
-            catch
+            else
             {
-                //check here why it failed and ask user to retry if the file is in use.
-                return "..\\..\\icons\\addproduct.png";
+                this.filldData.Visible = true;
+
             }
         }
     }

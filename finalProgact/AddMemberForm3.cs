@@ -30,9 +30,9 @@ namespace finalProgact
 
 
 
-                Form1.instance.ListProduct.Add(new List<string> { "1", this.tBoxName.Text, this.tBoxSurName.Text, this.tBoxPhone.Text, this.lblPathImage.Text });
+                Form1.instance.ListMembers.Add(new List<string> { "1", this.tBoxName.Text, this.tBoxSurName.Text, this.tBoxPhone.Text, this.lblPathImage.Text });
 
-                Form1.instance.DGV2.Rows.Add("3",this.tBoxName.Text, this.tBoxSurName.Text, this.tBoxPhone.Text);
+                Form1.instance.DGV2.Rows.Add("3",this.tBoxName.Text, this.tBoxSurName.Text, this.tBoxPhone.Text,Form1.instance.ListMembers.Count()-1);
 
                 this.tBoxName.Text = "";
                 this.tBoxSurName.Text = "";
