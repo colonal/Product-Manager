@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBoxSave = new System.Windows.Forms.CheckBox();
+            this.faildLogin = new System.Windows.Forms.Label();
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.butLogin = new System.Windows.Forms.Button();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.faildLogin = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,15 +55,41 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // groupBox2
+            // groupBox3
             // 
-            this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(582, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(559, 547);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
+            this.groupBox3.Controls.Add(this.checkBoxSave);
+            this.groupBox3.Controls.Add(this.faildLogin);
+            this.groupBox3.Controls.Add(this.textBoxUserName);
+            this.groupBox3.Controls.Add(this.butLogin);
+            this.groupBox3.Controls.Add(this.textBoxPassword);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Location = new System.Drawing.Point(31, 93);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(521, 356);
+            this.groupBox3.TabIndex = 13;
+            this.groupBox3.TabStop = false;
+            // 
+            // checkBoxSave
+            // 
+            this.checkBoxSave.AutoSize = true;
+            this.checkBoxSave.Location = new System.Drawing.Point(14, 198);
+            this.checkBoxSave.Name = "checkBoxSave";
+            this.checkBoxSave.Size = new System.Drawing.Size(121, 21);
+            this.checkBoxSave.TabIndex = 14;
+            this.checkBoxSave.Text = "Save passwod";
+            this.checkBoxSave.UseVisualStyleBackColor = true;
+            // 
+            // faildLogin
+            // 
+            this.faildLogin.AutoSize = true;
+            this.faildLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.faildLogin.Location = new System.Drawing.Point(113, 316);
+            this.faildLogin.Name = "faildLogin";
+            this.faildLogin.Size = new System.Drawing.Size(315, 17);
+            this.faildLogin.TabIndex = 13;
+            this.faildLogin.Text = "Login failed check your password and userName";
+            this.faildLogin.Visible = false;
             // 
             // textBoxUserName
             // 
@@ -115,20 +141,15 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Password";
             // 
-            // groupBox3
+            // groupBox2
             // 
-            this.groupBox3.Controls.Add(this.checkBox1);
-            this.groupBox3.Controls.Add(this.faildLogin);
-            this.groupBox3.Controls.Add(this.textBoxUserName);
-            this.groupBox3.Controls.Add(this.butLogin);
-            this.groupBox3.Controls.Add(this.textBoxPassword);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(31, 93);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(521, 356);
-            this.groupBox3.TabIndex = 13;
-            this.groupBox3.TabStop = false;
+            this.groupBox2.Controls.Add(this.pictureBox1);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(582, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(559, 547);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -139,27 +160,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // faildLogin
-            // 
-            this.faildLogin.AutoSize = true;
-            this.faildLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.faildLogin.Location = new System.Drawing.Point(113, 316);
-            this.faildLogin.Name = "faildLogin";
-            this.faildLogin.Size = new System.Drawing.Size(315, 17);
-            this.faildLogin.TabIndex = 13;
-            this.faildLogin.Text = "Login failed check your password and userName";
-            this.faildLogin.Visible = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(14, 198);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(121, 21);
-            this.checkBox1.TabIndex = 14;
-            this.checkBox1.Text = "Save passwod";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // LoginForm
             // 
@@ -174,9 +174,9 @@
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -194,6 +194,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label faildLogin;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxSave;
     }
 }

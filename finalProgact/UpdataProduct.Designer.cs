@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdataProduct));
             this.filldData = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -74,6 +75,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -93,6 +95,7 @@
             this.tBoxQouta.Name = "tBoxQouta";
             this.tBoxQouta.Size = new System.Drawing.Size(214, 30);
             this.tBoxQouta.TabIndex = 9;
+            this.tBoxQouta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBoxQouta_KeyPress);
             // 
             // lblPathImage
             // 
@@ -136,7 +139,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Available",
-            "Unailable"});
+            "UnAvailable"});
             this.comboBox1.Location = new System.Drawing.Point(186, 261);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(208, 33);
@@ -190,6 +193,7 @@
             this.tBoxlblPrice.Name = "tBoxlblPrice";
             this.tBoxlblPrice.Size = new System.Drawing.Size(214, 30);
             this.tBoxlblPrice.TabIndex = 7;
+            this.tBoxlblPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBoxlblPrice_KeyPress);
             // 
             // lblPrice
             // 
@@ -253,9 +257,9 @@
             this.lblAddProduct.Font = new System.Drawing.Font("Rockwell", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddProduct.Location = new System.Drawing.Point(82, 20);
             this.lblAddProduct.Name = "lblAddProduct";
-            this.lblAddProduct.Size = new System.Drawing.Size(284, 53);
+            this.lblAddProduct.Size = new System.Drawing.Size(348, 53);
             this.lblAddProduct.TabIndex = 3;
-            this.lblAddProduct.Text = "Add Product";
+            this.lblAddProduct.Text = "Update Product";
             // 
             // groupBox1
             // 
@@ -277,8 +281,9 @@
             this.ClientSize = new System.Drawing.Size(514, 877);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UpdataProduct";
-            this.Text = "UpdataProduct";
+            this.Text = "Update Product";
             this.Load += new System.EventHandler(this.UpdataProduct_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

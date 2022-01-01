@@ -15,7 +15,7 @@ namespace finalProgact
         public List<String> ListProduct;
         public int index;
         public int indexTabl;
-        public UpdataProduct(List<String> l,int i,int it)
+        public UpdataProduct(List<String> l, int i, int it)
         {
             InitializeComponent();
             ListProduct = l;
@@ -35,11 +35,16 @@ namespace finalProgact
                 // image file path  
                 lblPathImage.Text = open.FileName;
 
-            } 
+            }
         }
 
         private void UpdataProduct_Load(object sender, EventArgs e)
         {
+            if (Form1.instance.isDark)
+            {
+                this.groupBox1.BackColor = ColorTranslator.FromHtml("#4d4d4d");
+                this.lblAddProduct.ForeColor = Color.White;
+            }
             tBoxName.Text = ListProduct[1];
             tBoxManufacturer.Text = ListProduct[2];
             tBoxlblPrice.Text = ListProduct[3];
@@ -49,28 +54,30 @@ namespace finalProgact
             {
                 pictureBox1.Image = Image.FromFile(ListProduct[6]);
                 lblPathImage.Text = ListProduct[6];
-                
+
             }
-            catch {
+            catch
+            {
                 pictureBox1.Image = Image.FromFile("..\\..\\icons\\addproduct.png");
                 lblPathImage.Text = "..\\..\\icons\\addproduct.png";
-                
+
             }
-            //MessageBox.Show(chackPathImage(ListProduct[6]));
-            
-            
-            if (ListProduct[5] == "Avilable")
+
+
+
+            if (ListProduct[5] == "Available")
             {
                 comboBox1.SelectedIndex = 0;
             }
-            else {
+            else
+            {
                 comboBox1.SelectedIndex = 1;
             }
-           
+
         }
 
 
-        
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -81,26 +88,68 @@ namespace finalProgact
                 this.tBoxQouta.Text != ""
                 )
             {
-                MessageBox.Show(index.ToString());
-                // { "1", "Asus F15", " ASUS", "900", "20", "Avilable", "C:\\Users\\user\\Pictures\\2.jpg" }
 
-                Form1.instance.ListProduct[0] = new List<string> { ListProduct[0], tBoxName.Text, tBoxManufacturer.Text, tBoxlblPrice.Text, tBoxQouta.Text, comboBox1.SelectedItem.ToString(), lblPathImage.Text };
+
+                DataManagementProduct updateData = new DataManagementProduct();
+                updateData.UpdateData(int.Parse(ListProduct[0]), tBoxName.Text, tBoxManufacturer.Text, int.Parse(tBoxlblPrice.Text), int.Parse(tBoxQouta.Text), comboBox1.SelectedItem.ToString(), lblPathImage.Text);
+
+                Form1.instance.ListProduct[index] = new List<string> { ListProduct[0], tBoxName.Text, tBoxManufacturer.Text, tBoxlblPrice.Text, tBoxQouta.Text, comboBox1.SelectedItem.ToString(), lblPathImage.Text };
 
                 DataTable dt = (DataTable)Form1.instance.DGV.DataSource;
 
-                //Form1.instance.DGV.Rows[indexTabl].Cells[0].Value = tBoxName.Text;
+
                 Form1.instance.DGV.Rows[indexTabl].Cells[0].Value = tBoxName.Text;
                 Form1.instance.DGV.Rows[indexTabl].Cells[1].Value = tBoxManufacturer.Text;
                 Form1.instance.DGV.Rows[indexTabl].Cells[2].Value = tBoxlblPrice.Text;
                 Form1.instance.DGV.Rows[indexTabl].Cells[3].Value = tBoxQouta.Text;
                 Form1.instance.DGV.Rows[indexTabl].Cells[4].Value = comboBox1.SelectedItem.ToString();
-                //Form1.instance.DGV.Rows[indexTabl].Cells[6].Value = inde;
+
                 MessageBox.Show("successful update");
             }
             else
             {
                 this.filldData.Visible = true;
 
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+
+
+
+            var x = MessageBox.Show(" Are you sure to delete?" , "", MessageBoxButtons.YesNo);
+
+            if (x.ToString() == "Yes")
+            {
+
+                DataManagementProduct deleteData = new DataManagementProduct();
+                deleteData.DeleteData(int.Parse(ListProduct[0]));
+                Form1.instance.ListProduct.RemoveAt(index);
+
+                Form1.instance.DGV.Rows.RemoveAt(indexTabl);
+
+                this.Close();
+            }
+
+        }
+
+        private void tBoxlblPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar; 
+                if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+                            {
+                    e.Handled =  true;
+                        }
+        }
+
+        private void tBoxQouta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
             }
         }
     }

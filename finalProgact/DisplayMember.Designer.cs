@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DisplayMember));
             this.filldData = new System.Windows.Forms.Label();
             this.lblPathImage = new System.Windows.Forms.Label();
             this.tBoxPhone = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tBoxUserName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.butDelet = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblUpload = new System.Windows.Forms.Label();
             this.butUpdate = new System.Windows.Forms.Button();
@@ -43,7 +47,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblAddMember = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.butDelet = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,6 +86,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Silver;
+            this.groupBox2.Controls.Add(this.tBoxUserName);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.butDelet);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.lblUpload);
@@ -100,6 +105,37 @@
             this.groupBox2.Size = new System.Drawing.Size(479, 433);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
+            // 
+            // tBoxUserName
+            // 
+            this.tBoxUserName.Enabled = false;
+            this.tBoxUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBoxUserName.Location = new System.Drawing.Point(187, 21);
+            this.tBoxUserName.Name = "tBoxUserName";
+            this.tBoxUserName.ReadOnly = true;
+            this.tBoxUserName.Size = new System.Drawing.Size(214, 30);
+            this.tBoxUserName.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 25);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "UserName:";
+            // 
+            // butDelet
+            // 
+            this.butDelet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butDelet.Location = new System.Drawing.Point(187, 311);
+            this.butDelet.Name = "butDelet";
+            this.butDelet.Size = new System.Drawing.Size(214, 34);
+            this.butDelet.TabIndex = 19;
+            this.butDelet.Text = "Delete";
+            this.butDelet.UseVisualStyleBackColor = true;
+            this.butDelet.Click += new System.EventHandler(this.butDelet_Click);
             // 
             // button1
             // 
@@ -204,23 +240,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::finalProgact.Properties.Resources.addmember;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(124, 70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(198, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // butDelet
-            // 
-            this.butDelet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butDelet.Location = new System.Drawing.Point(187, 311);
-            this.butDelet.Name = "butDelet";
-            this.butDelet.Size = new System.Drawing.Size(214, 34);
-            this.butDelet.TabIndex = 19;
-            this.butDelet.Text = "Delete";
-            this.butDelet.UseVisualStyleBackColor = true;
             // 
             // DisplayMember
             // 
@@ -259,5 +285,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblAddMember;
         private System.Windows.Forms.Button butDelet;
+        private System.Windows.Forms.TextBox tBoxUserName;
+        private System.Windows.Forms.Label label1;
     }
 }

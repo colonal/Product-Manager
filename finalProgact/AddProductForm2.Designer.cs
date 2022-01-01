@@ -98,6 +98,7 @@
             this.tBoxlblPrice.Size = new System.Drawing.Size(214, 30);
             this.tBoxlblPrice.TabIndex = 7;
             this.tBoxlblPrice.TextChanged += new System.EventHandler(this.tBoxlblPrice_TextChanged);
+            this.tBoxlblPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBoxlblPrice_KeyPress);
             // 
             // lblPrice
             // 
@@ -118,6 +119,7 @@
             this.tBoxQouta.Size = new System.Drawing.Size(214, 30);
             this.tBoxQouta.TabIndex = 9;
             this.tBoxQouta.TextChanged += new System.EventHandler(this.tBoxQouta_TextChanged);
+            this.tBoxQouta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBoxQouta_KeyPress);
             // 
             // lblQouta
             // 
@@ -255,6 +257,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "AddProductForm2";
             this.Text = "AddProductForm2";
+            this.Load += new System.EventHandler(this.AddProductForm2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -30,11 +30,20 @@ namespace finalProgact
 
         private void DisplayMember_Load(object sender, EventArgs e)
         {
-
+            if (Form1.instance.isDark)
+            {
+                this.groupBox1.BackColor = ColorTranslator.FromHtml("#4d4d4d");
+                this.lblAddMember.ForeColor = Color.White;
+            }
             tBoxName.Text = ListMembers[1];
             tBoxSurName.Text = ListMembers[2];
             tBoxPhone.Text = ListMembers[3];
-            
+            tBoxUserName.Text = ListMembers[5];
+            if (ListMembers[5] == "") {
+                this.tBoxUserName.Visible = false;
+                this.label1.Visible = false;
+
+            }
 
 
             
@@ -68,7 +77,7 @@ namespace finalProgact
 
         private void butUpdate_Click(object sender, EventArgs e)
         {
-            // "1", "mohammad", " cc", "+9555544", "C:\\Users\\user\\Pictures\\2.jpg"
+
 
             if (
                 this.tBoxName.Text != "" &&
@@ -76,7 +85,11 @@ namespace finalProgact
                 this.tBoxPhone.Text != ""
                 )
             {
-                Form1.instance.ListMembers[0] = new List<string> { ListMembers[0], tBoxName.Text, tBoxSurName.Text, tBoxPhone.Text, lblPathImage.Text };
+                
+                DataManagementMember updataData = new DataManagementMember();
+                updataData.UpdateData(int.Parse(ListMembers[0]), tBoxName.Text, tBoxSurName.Text, tBoxPhone.Text, lblPathImage.Text, ListMembers[5].ToString(), ListMembers[6].ToString());
+
+                Form1.instance.ListMembers[0] = new List<string> { ListMembers[0], tBoxName.Text, tBoxSurName.Text, tBoxPhone.Text, lblPathImage.Text ,ListMembers[5].ToString(), ListMembers[6].ToString()};
 
                 DataTable dt = (DataTable)Form1.instance.DGV.DataSource;
 
@@ -91,6 +104,23 @@ namespace finalProgact
             {
                 this.filldData.Visible = true;
 
+            }
+        }
+
+        private void butDelet_Click(object sender, EventArgs e)
+        {
+            var x = MessageBox.Show(" Are you sure to delete?", "", MessageBoxButtons.YesNo);
+
+            if (x.ToString() == "Yes")
+            {
+
+                DataManagementMember deleteData = new DataManagementMember();
+                deleteData.DeleteData(int.Parse(ListMembers[0]));
+                Form1.instance.ListMembers.RemoveAt(index);
+
+                Form1.instance.DGV2.Rows.RemoveAt(indexTabl);
+
+                this.Close();
             }
         }
     }

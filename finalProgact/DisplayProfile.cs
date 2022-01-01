@@ -12,7 +12,7 @@ namespace finalProgact
     public partial class DisplayProfile : Form
     {
         public List<String> ListProfile;
-
+        String index;
 
         public DisplayProfile(List<String> l)
         {
@@ -25,7 +25,6 @@ namespace finalProgact
 
         private void butUpdate_Click(object sender, EventArgs e)
         {
-            // "2", "Ali", " ss", "+95355324", "C:\\Users\\user\\Pictures\\3.jpg"
             if (
                 this.tBoxName.Text != "" &&
                 this.tBoxSurName.Text != "" &&
@@ -33,17 +32,18 @@ namespace finalProgact
                 )
 
             {
+                if (this.tBoxPassword.Text.Count() < 3)
+                {
+                    MessageBox.Show("Username and password longer than 3 characters must be entered");
+                    this.filldData.Visible = true;
+                    return;
+                }
+                DataManagementMember updata = new DataManagementMember();
+                updata.UpdateData(int.Parse(Form1.instance.ListProfile[0]), tBoxName.Text, tBoxSurName.Text, tBoxPhone.Text, lblPathImage.Text, tBoxUser.Text, tBoxPassword.Text);
+
                 this.filldData.Visible = false;
 
-                Form1.instance.ListProfile = new List<string> { Form1.instance.ListProfile[0], tBoxName.Text, tBoxSurName.Text, tBoxPhone.Text, lblPathImage.Text };
-                
-                //Form1.instance.ListMembers[index] = new List<String> { Form1.instance.ListProfile[0], tBoxName.Text, tBoxSurName.Text, tBoxPhone.Text, lblPathImage.Text };
-
-                //Form1.instance.DGV2.Rows[indexTabl].Cells[1].Value = tBoxName.Text;
-                //Form1.instance.DGV2.Rows[indexTabl].Cells[2].Value = tBoxSurName.Text;
-                //Form1.instance.DGV2.Rows[indexTabl].Cells[3].Value = tBoxPhone.Text;
-
-
+                Form1.instance.ListProfile = new List<string> { Form1.instance.ListProfile[0], tBoxName.Text, tBoxSurName.Text, tBoxPhone.Text, lblPathImage.Text,index, tBoxUser.Text, tBoxPassword.Text };
 
                 MessageBox.Show("successful update");
             }
@@ -56,9 +56,19 @@ namespace finalProgact
 
         private void DisplayProfile_Load(object sender, EventArgs e)
         {
+            if (Form1.instance.isDark)
+            {
+                this.groupBox1.BackColor = ColorTranslator.FromHtml("#4d4d4d");
+                this.lblAddMember.ForeColor = Color.White;
+            }
+            
             tBoxName.Text = ListProfile[1];
             tBoxSurName.Text = ListProfile[2];
             tBoxPhone.Text = ListProfile[3];
+            index = ListProfile[5];
+            tBoxUser.Text = ListProfile[6];
+            tBoxPassword.Text = ListProfile[7];
+
 
             try {
                 pictureBox1.Image = Image.FromFile( ListProfile[4]);
@@ -85,6 +95,11 @@ namespace finalProgact
                 lblPathImage.Text = open.FileName;
 
             } 
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

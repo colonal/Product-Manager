@@ -31,12 +31,15 @@ namespace finalProgact
 
                 this.filldData.Visible = false;
 
-                //var DataM = new finalProgact.DataManagement();
-                //List<List<string>> ListP = DataM.ListProduct;
-                //DataM.ListProduct.Add(new List<string> { "1", this.tBoxName.Text, this.tBoxManufacturer.Text, this.tBoxlblPrice.Text, this.tBoxQouta.Text, "Avilable", lblPathImage.Text });
-                Form1.instance.ListProduct.Add(new List<string> { "1", this.tBoxName.Text, this.tBoxManufacturer.Text, this.tBoxlblPrice.Text, this.tBoxQouta.Text, "Avilable", lblPathImage.Text });
 
-                Form1.instance.DGV.Rows.Add(this.tBoxName.Text, this.tBoxManufacturer.Text, this.tBoxlblPrice.Text, this.tBoxQouta.Text, "Avilable",  Form1.instance.ListProduct.Count()-1,this.lblPathImage.Text);
+
+                DataManagementProduct insertData = new DataManagementProduct();
+                List<String> d = insertData.InsertData(this.tBoxName.Text, this.tBoxManufacturer.Text, int.Parse(this.tBoxlblPrice.Text), int.Parse(this.tBoxQouta.Text), "Available", lblPathImage.Text);
+                
+                Form1.instance.ListProduct.Add(d);
+
+
+                Form1.instance.DGV.Rows.Add(this.tBoxName.Text, this.tBoxManufacturer.Text, this.tBoxlblPrice.Text, this.tBoxQouta.Text, "Available",  Form1.instance.ListProduct.Count()-1,this.lblPathImage.Text);
 
                 this.tBoxName.Text = "" ;
                 this.tBoxManufacturer.Text = "" ;
@@ -140,6 +143,33 @@ namespace finalProgact
         private void filldData_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddProductForm2_Load(object sender, EventArgs e)
+        {
+            if (Form1.instance.isDark)
+            {
+                this.groupBox1.BackColor = ColorTranslator.FromHtml("#4d4d4d");
+                this.lblAddProduct.ForeColor = Color.White;
+            }
+        }
+
+        private void tBoxlblPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tBoxQouta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
