@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SeellConfirmForm5));
             this.QuantityLab = new System.Windows.Forms.Label();
             this.MemberLab = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -138,9 +139,9 @@
             this.lblAddProduct.Font = new System.Drawing.Font("Rockwell", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddProduct.Location = new System.Drawing.Point(53, 9);
             this.lblAddProduct.Name = "lblAddProduct";
-            this.lblAddProduct.Size = new System.Drawing.Size(278, 53);
+            this.lblAddProduct.Size = new System.Drawing.Size(290, 53);
             this.lblAddProduct.TabIndex = 5;
-            this.lblAddProduct.Text = "Sell Product";
+            this.lblAddProduct.Text = "Sell Confirm";
             this.lblAddProduct.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // groupBox1
@@ -172,8 +173,9 @@
             this.ClientSize = new System.Drawing.Size(419, 606);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SeellConfirmForm5";
-            this.Text = "SeellConfirmForm5";
+            this.Text = "Seell  Confirm";
             this.Load += new System.EventHandler(this.SeellConfirmForm5_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

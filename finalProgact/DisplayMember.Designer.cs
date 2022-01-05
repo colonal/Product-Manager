@@ -255,8 +255,9 @@
             this.ClientSize = new System.Drawing.Size(479, 735);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DisplayMember";
-            this.Text = "DisplayMember";
+            this.Text = "Display Member";
             this.Load += new System.EventHandler(this.DisplayMember_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

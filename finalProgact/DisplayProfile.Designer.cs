@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DisplayProfile));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tBoxPassword = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.Label();
+            this.tBoxUser = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblPathImage = new System.Windows.Forms.Label();
             this.lblAddMember = new System.Windows.Forms.Label();
@@ -43,10 +48,6 @@
             this.lblSurName = new System.Windows.Forms.Label();
             this.tBoxName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.tBoxUser = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tBoxPassword = new System.Windows.Forms.TextBox();
-            this.Password = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -78,6 +79,43 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // tBoxPassword
+            // 
+            this.tBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBoxPassword.Location = new System.Drawing.Point(195, 542);
+            this.tBoxPassword.Name = "tBoxPassword";
+            this.tBoxPassword.Size = new System.Drawing.Size(214, 30);
+            this.tBoxPassword.TabIndex = 23;
+            // 
+            // Password
+            // 
+            this.Password.AutoSize = true;
+            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.Location = new System.Drawing.Point(29, 542);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(113, 25);
+            this.Password.TabIndex = 22;
+            this.Password.Text = "Password:";
+            // 
+            // tBoxUser
+            // 
+            this.tBoxUser.Enabled = false;
+            this.tBoxUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBoxUser.Location = new System.Drawing.Point(195, 336);
+            this.tBoxUser.Name = "tBoxUser";
+            this.tBoxUser.Size = new System.Drawing.Size(214, 30);
+            this.tBoxUser.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(29, 336);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 25);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "User:";
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -107,9 +145,9 @@
             this.lblAddMember.Font = new System.Drawing.Font("Rockwell", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddMember.Location = new System.Drawing.Point(39, 14);
             this.lblAddMember.Name = "lblAddMember";
-            this.lblAddMember.Size = new System.Drawing.Size(382, 53);
+            this.lblAddMember.Size = new System.Drawing.Size(341, 53);
             this.lblAddMember.TabIndex = 5;
-            this.lblAddMember.Text = "Display Member";
+            this.lblAddMember.Text = "Display Profile";
             // 
             // pictureBox1
             // 
@@ -219,51 +257,15 @@
             this.lblName.TabIndex = 6;
             this.lblName.Text = "Name:";
             // 
-            // tBoxUser
-            // 
-            this.tBoxUser.Enabled = false;
-            this.tBoxUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBoxUser.Location = new System.Drawing.Point(195, 336);
-            this.tBoxUser.Name = "tBoxUser";
-            this.tBoxUser.Size = new System.Drawing.Size(214, 30);
-            this.tBoxUser.TabIndex = 21;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 336);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 25);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "User:";
-            // 
-            // tBoxPassword
-            // 
-            this.tBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBoxPassword.Location = new System.Drawing.Point(195, 542);
-            this.tBoxPassword.Name = "tBoxPassword";
-            this.tBoxPassword.Size = new System.Drawing.Size(214, 30);
-            this.tBoxPassword.TabIndex = 23;
-            // 
-            // Password
-            // 
-            this.Password.AutoSize = true;
-            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(29, 542);
-            this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(113, 25);
-            this.Password.TabIndex = 22;
-            this.Password.Text = "Password:";
-            // 
             // DisplayProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 757);
             this.Controls.Add(this.groupBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DisplayProfile";
-            this.Text = "DisplayProfile";
+            this.Text = "Display Profile";
             this.Load += new System.EventHandler(this.DisplayProfile_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

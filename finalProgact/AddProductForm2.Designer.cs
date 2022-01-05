@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProductForm2));
             this.lblName = new System.Windows.Forms.Label();
             this.tBoxName = new System.Windows.Forms.TextBox();
             this.tBoxManufacturer = new System.Windows.Forms.TextBox();
@@ -255,8 +256,9 @@
             this.ClientSize = new System.Drawing.Size(468, 744);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddProductForm2";
-            this.Text = "AddProductForm2";
+            this.Text = "Add Product";
             this.Load += new System.EventHandler(this.AddProductForm2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -31,3 +31,19 @@ C:\colonal\Visual Studio 2010\finalProgact - Copy\finalProgact\bin\Debug\finalPr
 C:\colonal\Visual Studio 2010\finalProgact - Copy\finalProgact\obj\x86\Debug\finalProgact.SeellConfirmForm5.resources
 C:\colonal\finalProgact\finalProgact\obj\x86\Debug\finalProgact.exe
 C:\colonal\finalProgact\finalProgact\obj\x86\Debug\finalProgact.pdb
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\obj\x86\Debug\finalProgact.exe
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\obj\x86\Debug\finalProgact.pdb
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\bin\Debug\finalProgact.exe
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\bin\Debug\finalProgact.pdb
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\obj\x86\Debug\finalProgact.csprojResolveAssemblyReference.cache
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\obj\x86\Debug\finalProgact.AddMemberForm3.resources
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\obj\x86\Debug\finalProgact.AddProductForm2.resources
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\obj\x86\Debug\finalProgact.SeellConfirmForm5.resources
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\obj\x86\Debug\finalProgact.DisplayMember.resources
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\obj\x86\Debug\finalProgact.DisplayProfile.resources
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\obj\x86\Debug\finalProgact.Form1.resources
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\obj\x86\Debug\finalProgact.LoginForm.resources
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\obj\x86\Debug\finalProgact.Properties.Resources.resources
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\obj\x86\Debug\finalProgact.SellProductsForm4.resources
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\obj\x86\Debug\finalProgact.UpdataProduct.resources
+C:\colonal\Visual Studio 2010\Final-Project-CIS-124\finalProgact\obj\x86\Debug\finalProgact.csproj.GenerateResource.Cache

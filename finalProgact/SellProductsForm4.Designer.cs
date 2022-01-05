@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellProductsForm4));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblAddProduct = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labMember = new System.Windows.Forms.Label();
+            this.lblMember = new System.Windows.Forms.Label();
             this.filldData = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.comQuantity = new System.Windows.Forms.ComboBox();
             this.comBoxProduct = new System.Windows.Forms.ComboBox();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.lblProduct = new System.Windows.Forms.Label();
-            this.labMember = new System.Windows.Forms.Label();
-            this.lblMember = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -95,6 +96,26 @@
             this.groupBox2.Size = new System.Drawing.Size(441, 307);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
+            // 
+            // labMember
+            // 
+            this.labMember.AutoSize = true;
+            this.labMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labMember.Location = new System.Drawing.Point(168, 41);
+            this.labMember.Name = "labMember";
+            this.labMember.Size = new System.Drawing.Size(97, 25);
+            this.labMember.TabIndex = 17;
+            this.labMember.Text = "Member:";
+            // 
+            // lblMember
+            // 
+            this.lblMember.AutoSize = true;
+            this.lblMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMember.Location = new System.Drawing.Point(18, 41);
+            this.lblMember.Name = "lblMember";
+            this.lblMember.Size = new System.Drawing.Size(97, 25);
+            this.lblMember.TabIndex = 16;
+            this.lblMember.Text = "Member:";
             // 
             // filldData
             // 
@@ -160,26 +181,6 @@
             this.lblProduct.TabIndex = 3;
             this.lblProduct.Text = "Product:";
             // 
-            // labMember
-            // 
-            this.labMember.AutoSize = true;
-            this.labMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labMember.Location = new System.Drawing.Point(168, 41);
-            this.labMember.Name = "labMember";
-            this.labMember.Size = new System.Drawing.Size(97, 25);
-            this.labMember.TabIndex = 17;
-            this.labMember.Text = "Member:";
-            // 
-            // lblMember
-            // 
-            this.lblMember.AutoSize = true;
-            this.lblMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMember.Location = new System.Drawing.Point(18, 41);
-            this.lblMember.Name = "lblMember";
-            this.lblMember.Size = new System.Drawing.Size(97, 25);
-            this.lblMember.TabIndex = 16;
-            this.lblMember.Text = "Member:";
-            // 
             // SellProductsForm4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -187,8 +188,9 @@
             this.ClientSize = new System.Drawing.Size(441, 627);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SellProductsForm4";
-            this.Text = "SellProductsForm4";
+            this.Text = "Sell Products";
             this.Load += new System.EventHandler(this.SellProductsForm4_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
